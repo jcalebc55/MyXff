@@ -38,13 +38,13 @@ namespace MyXff.Views
             initializeData();
 
             viewModel = new ItemDetailViewModel();
-
+            
             BindingContext = viewModel;
             noteCourse.BindingContext = this;
         }
-#pragma warning disable IDE1006 // Naming Styles
+
         private void initializeData()
-#pragma warning restore IDE1006 // Naming Styles
+
         {
          
             var dataStore = new List<String> {"Str 1" ,"Str 2","str3" } ;
