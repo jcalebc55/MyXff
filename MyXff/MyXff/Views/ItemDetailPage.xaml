@@ -17,5 +17,6 @@
         <Entry Text="{Binding note.Heading}" FontSize="Medium" x:Name="noteHeading" Placeholder="Note Heading"/>
         
         <Editor Text="{Binding note.Text}" FontSize="Medium" AutoSize="TextChanges" x:Name="NoteText" Placeholder="Note Text"/>
+        
     </StackLayout>
 </ContentPage>

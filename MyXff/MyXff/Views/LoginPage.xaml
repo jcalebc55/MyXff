@@ -7,13 +7,41 @@
         <ToolbarItem Text="Sign Up" Clicked="OnSignUpButtonClicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout VerticalOptions="StartAndExpand">
-            <Label Text="Username" />
-            <Entry x:Name="usernameEntry" Placeholder="username" />
-            <Label Text="Password" />
-            <Entry x:Name="passwordEntry" IsPassword="true" />
-            <Button Text="Login" Clicked="OnLoginButtonClicked" />
-            <Label x:Name="messageLabel" />
-        </StackLayout>
+        
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="0"  Grid.Column="1"  Source="https://cdn.pixabay.com/photo/2020/02/27/01/00/01-00-31-405_960_720.png"   />
+            <Label Grid.Row="1"  Grid.Column="1" Text="Enter The login Details" FontAttributes="Bold" FontSize="Large" Grid.ColumnSpan="3"/>
+            <Entry Grid.Row="2"  Grid.Column="1" x:Name="usernameEntry" Placeholder="Username" PlaceholderColor="Olive" />
+            <Entry Grid.Row="3"  Grid.Column="1" x:Name="passwordEntry" IsPassword="true" Placeholder="Password" PlaceholderColor="Brown" />
+            <Button Grid.Row="4"  Grid.Column="1" Text="Login" Clicked="OnLoginButtonClicked"/>
+            <Button Grid.Row="5"  Grid.Column="1" Text="Forgot Password" />
+
+
+
+        </Grid>
+
+
+
+
+
     </ContentPage.Content>
 </ContentPage>

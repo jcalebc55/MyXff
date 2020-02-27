@@ -1,6 +1,6 @@
 ﻿using MyXff.Models;
 using System;
-
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +13,7 @@ namespace MyXff.Views
         public LoginPage()
         {
             InitializeComponent();
+          
         }
 
         //async 
@@ -39,7 +40,7 @@ namespace MyXff.Views
             }
             else
             {
-                messageLabel.Text = "Login failed";
+                //messageLabel.Text = "Login failed";
                 passwordEntry.Text = string.Empty;
             }
         }
