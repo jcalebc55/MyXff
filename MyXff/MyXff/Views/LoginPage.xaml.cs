@@ -35,8 +35,9 @@ namespace MyXff.Views
             if (isValid)
             {
                 //App. = true;
-                Navigation.InsertPageBefore(new MainPage(), this);
-                await Navigation.PopAsync();
+                // Navigation.InsertPageBefore(new MainPage(), this);
+                //NavigationPage nav = new NavigationPage(new MainPage());
+                await Navigation.PushAsync(new MainPage());
             }
             else
             {

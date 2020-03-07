@@ -16,18 +16,17 @@ namespace MyXff.Views
     {
         ItemDetailViewModel viewModel;
          
-        public IList<String> CourseList { get; set; } 
+       
 
 
 
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
-            initializeData();
 
-
-            BindingContext = viewModel;
-            noteCourse.BindingContext = this;
+            this.viewModel = viewModel;
+            BindingContext = this.viewModel;
+            
         }
 
         
@@ -35,23 +34,19 @@ namespace MyXff.Views
         public ItemDetailPage()
         {
             InitializeComponent();
-            initializeData();
+       
 
             viewModel = new ItemDetailViewModel();
             
             BindingContext = viewModel;
-            noteCourse.BindingContext = this;
+            
         }
 
-        private void initializeData()
-
-        {
-         
-            var dataStore = new List<String> {"Str 1" ,"Str 2","str3" } ;
-            CourseList = dataStore;
-        }
+       
         private void Cancel_Clicked(object sender, EventArgs e)
         {
+
+            viewModel.NoteHeading="xxxxx";
             DisplayAlert("Cancel option","Cancel was selected","Yes","No");
 
         }
